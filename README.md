@@ -163,7 +163,3 @@ The application is deployed on Hugging Face Spaces:
 - Implement a database for storing analysis results and tracking trends over time
 - Add visualization dashboards for better data representation
 - Include entity recognition for identifying key players and relationships
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
