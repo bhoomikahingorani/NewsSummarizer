@@ -68,12 +68,12 @@ news-sentiment-app/
 
 1. Start the API server:
    ```
-   python api.py
+   python api_file.py
    ```
 
 2. In a separate terminal, run the Streamlit app:
    ```
-   streamlit run app.py
+   streamlit run app_file.py
    ```
 
 3. Access the application in your browser at: http://localhost:8501
