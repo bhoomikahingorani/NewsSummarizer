@@ -177,3 +177,8 @@ news_app/
 news_app/Scripts/
 news_app/Lib/
 news_app/include/
+
+news_env/
+news_env/Scripts/
+news_env/Lib/
+news_env/include/

@@ -6,6 +6,8 @@ import tempfile
 import scipy.io.wavfile as wavfile
 import numpy as np
 from typing import Optional
+import asyncio
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -37,6 +39,7 @@ class TextToSpeech:
             logger.error(f"Error loading TTS model: {e}")
             logger.info("Will use dummy TTS implementation")
     
+ 
     def translate_to_hindi(self, text: str) -> str:
         """
         Translate text to Hindi.
@@ -48,11 +51,11 @@ class TextToSpeech:
             Hindi translation
         """
         try:
-            result = self.translator.translate(text, src='en', dest='hi')
+            result = asyncio.run(self.translator.translate(text, src='en', dest='hi'))
             return result.text
         except Exception as e:
             logger.error(f"Error translating to Hindi: {e}")
-            return text  # Return original text on error
+            return text 
     
     def text_to_speech(self, text: str, output_file: Optional[str] = None) -> str:
         """
